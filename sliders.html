@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sliders with D3.js</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .slider-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .slider-label {
+      flex: 1;
+      text-align: center;
+      margin-bottom: 5px;
+    }
+
+    .slider {
+      flex: 1;
+      -webkit-appearance: none;
+      /* Override default CSS styles */
+      appearance: none;
+      width: 100%;
+      /* Specified to be the full width of the flex-item */
+      height: 15px;
+      border-radius: 5px;
+      background: #d3d3d3;
+      outline: none;
+      opacity: 0.7;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+    }
+
+    .slider:hover {
+      opacity: 1;
+      /* Fully opaque on hover */
+    }
+
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      /* Override default look */
+      appearance: none;
+      width: 25px;
+      /* Set a specific slider handle width */
+      height: 25px;
+      /* Slider handle height */
+      border-radius: 50%;
+      background: #4CAF50;
+      cursor: pointer;
+      /* Cursor on hover */
+    }
+
+    .slider::-moz-range-thumb {
+      width: 25px;
+      /* Set a specific slider handle width */
+      height: 25px;
+      /* Slider handle height */
+      border-radius: 50%;
+      background: #4CAF50;
+      cursor: pointer;
+      /* Cursor on hover */
+    }
+
+    .slider-value {
+      flex: 0 0 20%;
+      /* Do not grow, do not shrink, start at 20% width */
+      text-align: left;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .slider-container {
+        flex-direction: column;
+      }
+
+      .slider-label,
+      .slider-value {
+        flex: 0 0 auto;
+        width: 100%;
+        /* Full width on smaller screens */
+      }
+
+      .slider {
+        width: 80%;
+        /* Slider width is reduced to 80% on smaller screens */
+        margin: 0 auto;
+        /* Center slider */
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="sliders">
+    <!-- Sliders will be added here dynamically -->
+  </div>
+
+  <script>
+    // Add your JavaScript here
+    const slidersData = [
+      { id: 'hoursPerDay', label: ' Hours / Day', min: 0, max: 8, step: 0.5, value: 2 },
+      { id: 'avgSpeed', label: ' MPH', min: 1, max: 3.5, step: 0.5, value: 1.5 },
+      { id: 'avgIncline', label: ' °Avg Incline', min: 0, max: 16, step: 1, value: 0 }
+    ];
+
+    const slidersContainer = d3.select('#sliders');
+
+    slidersData.forEach(sliderData => {
+      const container = slidersContainer.append('div').attr('class', 'slider-container');
+
+      const label = container.append('span')
+        .attr('class', 'slider-label')
+
+
+      const output = label.append('span')
+        .text(sliderData.value);
+
+      label.append('span')
+        // .attr('class', 'slider-label')
+        .text(sliderData.label);
+
+      const sliderInput = container.append('input')
+        .attr('type', 'range')
+        .attr('min', sliderData.min)
+        .attr('max', sliderData.max)
+        .attr('step', sliderData.step)
+        .attr('value', sliderData.value)
+        .attr('class', 'slider')
+        .attr('id', sliderData.id);
+
+
+      sliderInput.on('input', function () {
+        output.text(this.value);
+      });
+    });
+  </script>
+
+</body>
+
+</html>

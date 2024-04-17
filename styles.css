@@ -1,0 +1,84 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  /* padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; */
+  height: 100%;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  background-color: #f0f0f0;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+}
+
+section {
+  padding: 20px 0;
+}
+
+#effort {
+  width: 80%;
+  padding: 20px 0;
+}
+
+#slider-container div {
+  margin-bottom: 20px;
+}
+
+input[type=range] {
+  width: calc(100% - 100px);
+  margin: 0 10px;
+  vertical-align: middle;
+}
+
+span {
+  width: 50px;
+  display: inline-block;
+  text-align: right;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  display: block;
+}
+
+/* ... other styles ... */
+
+#daily-output {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.gauge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.gauge-container {
+  margin: 10px;
+  width: 150px;
+  height: 150px;
+  position: relative;
+}
+
+/* Style the map container to have a specific size */
+#map {
+  height: 400px;
+  /* This sets the height of the map */
+  width: 100%;
+  /* This sets the width of the map */
+}
