@@ -148,19 +148,10 @@ section {
   color: #666;
 }
 
-
-#yearly-output{
-  width: 100%;
-}
-
 /* Style the map container to have a specific size */
 #map {
-  /* height: 400px; */
-  /* This sets the height of the map */
   width: 100%;
-  flex: 0 1 500px;
+  flex: 0 1 250px;
 
-  /* height: 100%; */
-  /* This sets the width of the map */
 }
 
