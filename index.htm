@@ -10,34 +10,43 @@
 <body>
   <div id="app">
     <header>
-      <h1>RISE EIGHT</h1>
     </header>
     <section id="effort">
-      <div id="hours-slider">
-        <label for="hours">Hours / Day:</label>
-        <input type="range" id="hours" min="0" max="8" step="0.5" value="2">
-        <span id="hoursValue">2 hours</span>
+      <h1>Your Effort</h1>
+      <div id="sliders">
+        <!-- Sliders will be added here dynamically -->
       </div>
-      <div id="speed-slider">
-        <label for="speed">Avg Speed (mph):</label>
-        <input type="range" id="speed" min="0.5" max="3.5" step="0.5" value="1">
-        <span id="speedValue">1 mph</span>
-      </div>
-      <div id="incline-slider">
-        <label for="incline">Avg Incline (degrees):</label>
-        <input type="range" id="incline" min="0" max="12" step="0.5" value="0">
-        <span id="inclineValue">0 degrees</span>
-      </div>
+
     </section>
     <section id="daily-output">
-      <div id="stepsGauge" class="gauge-container"></div>
-      <div id="milesGauge" class="gauge-container"></div>
-      <div id="caloriesGauge" class="gauge-container"></div>
+      <h1>Daily Results</h1>
+      <div class="metrics">
+        <div class="metric">
+          <div class="value" id="miles">3</div>
+          <div class="unit">Miles</div>
+        </div>
+        <div class="metric">
+          <div class="value" id="steps">6000</div>
+          <div class="unit">Steps</div>
+        </div>
+        <div class="metric">
+          <div class="value" id="calories">480</div>
+          <div class="unit">Cal</div>
+        </div>
+      </div>
     </section>
     <section id="yearly-output">
+      <h1>Yearly Conquests</h1>
+      <div id="distance-walked"></div>
+      <div id="map-row">
+        <div id="map"></div>
+        <div class="metric">
+          <div class="value" id="yearly-miles"></div>
+          <div class="unit">Miles</div>
+        </div>
+      </div>
     </section>
   </div>
-  <div id="map"></div>
 
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <!-- prettier-ignore -->

@@ -1,10 +1,7 @@
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
-  /* padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center; */
+
   height: 100%;
 }
 
@@ -13,50 +10,170 @@ body {
   flex-direction: column;
   align-items: center;
 }
-
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+  header {
+      background-image: url('/logo_original-wide-color-small.png');
+      width: 100%;
+      height: 50px;
+      background-size: 237px 36px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+}
 header {
-  background-color: #f0f0f0;
-  width: 100%;
-  text-align: center;
-  padding: 20px 0;
+  background-image: url('/logo_original-wide-color-small.png');
+  /* width: 100%; */
+  background-size: 237px 36px;
+  background-repeat: no-repeat;
+  background-position: center;
+
 }
 
 section {
-  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* This centers all child items horizontally */
 }
 
-#effort {
-  width: 80%;
-  padding: 20px 0;
-}
-
-#slider-container div {
+.slider-container {
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
   margin-bottom: 20px;
 }
 
-input[type=range] {
-  width: calc(100% - 100px);
-  margin: 0 10px;
-  vertical-align: middle;
+.slider-label {
+  flex: 1;
+  text-align: left;
+  margin-bottom: 5px;
+  margin-left: 20px;
 }
 
-span {
-  width: 50px;
-  display: inline-block;
-  text-align: right;
-}
-
-svg {
+#sliders {
+  display: flex;
+  flex-direction: column;
+  column-gap: 20px;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  height: 100%;
-  overflow: visible;
-  display: block;
+}
+
+.slider {
+  flex: 1;
+  -webkit-appearance: none;
+  /* Override default CSS styles */
+  appearance: none;
+  width: 100%;
+  /* Specified to be the full width of the flex-item */
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+  /* Fully opaque on hover */
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  width: 25px;
+  /* Set a specific slider handle width */
+  height: 25px;
+  /* Slider handle height */
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+  /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  /* Set a specific slider handle width */
+  height: 25px;
+  /* Slider handle height */
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+  /* Cursor on hover */
+}
+
+.slider-value {
+  flex: 0 0 20%;
+  /* Do not grow, do not shrink, start at 20% width */
+  text-align: left;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.metrics {
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+}
+
+.value {
+  font-size: 2.5em;
+  color: #333;
+}
+
+.unit {
+  font-size: 0.85em;
+  color: #666;
+}
+
+h1 {
+  width: 100%;
+  /* Makes the h1 full width of the flex-container */
+  text-align: center;
+  /* Centers the text of the h1 tag */
+}
+
+@media (max-width: 768px) {
+  .slider-container {
+    flex-direction: column;
+  }
+
+  .slider-label,
+  .slider-value {
+    flex: 0 0 auto;
+    width: 100%;
+    /* Full width on smaller screens */
+  }
+
+  .slider {
+    width: 80%;
+    /* Slider width is reduced to 80% on smaller screens */
+    margin: 0 auto;
+    /* Center slider */
+  }
 }
 
 /* ... other styles ... */
 
 #daily-output {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   width: 100%;
 }
@@ -75,10 +192,17 @@ svg {
   position: relative;
 }
 
+#map-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 80%;
+  column-gap: 20px;
+}
 /* Style the map container to have a specific size */
 #map {
   height: 400px;
   /* This sets the height of the map */
-  width: 100%;
+  width: 80%;
   /* This sets the width of the map */
 }
