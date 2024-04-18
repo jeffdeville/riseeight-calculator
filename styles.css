@@ -11,6 +11,11 @@ body {
   align-items: center;
 }
 
+h1 {
+  width: 100%;
+  text-align: center;
+  margin: 10px;
+}
 @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
   header {
@@ -29,6 +34,10 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  padding-bottom: 20px;
+  border-bottom: #e4e4e4;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
 }
 
 #sliders {
@@ -52,7 +61,7 @@ section {
   text-align: left;
   margin-bottom: 5px;
   margin-left: 10px;
-  width: 30%;
+  width: 35%;
 }
 
 .slider {
@@ -60,7 +69,7 @@ section {
   -webkit-appearance: none;
   /* Override default CSS styles */
   appearance: none;
-  width: 70%;
+  width: 65%;
   /* Specified to be the full width of the flex-item */
   height: 15px;
   border-radius: 5px;
@@ -139,23 +148,21 @@ section {
   color: #666;
 }
 
-h1 {
+
+#yearly-output{
   width: 100%;
-  /* Makes the h1 full width of the flex-container */
-  text-align: center;
-  /* Centers the text of the h1 tag */
 }
 
 #map-row {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 80%;
+  width: 100%;
   column-gap: 20px;
 }
 /* Style the map container to have a specific size */
 #map {
-  height: 600px;
+  height: 400px;
   /* This sets the height of the map */
   width: 100%;
   /* This sets the width of the map */
