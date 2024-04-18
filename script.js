@@ -148,7 +148,7 @@ function initSliders() {
   const slidersData = [
     {
       id: "hoursPerDay",
-      label: " Hours / Day",
+      label: " Hrs/Day",
       min: 0,
       max: 8,
       step: 0.5,
@@ -157,7 +157,7 @@ function initSliders() {
     { id: "avgSpeed", label: " MPH", min: 1, max: 3.5, step: 0.5, value: 1.5 },
     {
       id: "avgIncline",
-      label: " °Avg Incline",
+      label: "° Incline",
       min: 0,
       max: 16,
       step: 1,
