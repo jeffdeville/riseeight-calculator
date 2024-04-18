@@ -219,7 +219,6 @@ function updateGauges() {
 
   // Calculate yearly distance
   const yearlyDistance = Calculation.yearlyDistance(hours, speed);
-  updateGauge("yearly-miles", yearlyDistance);
   const [city1, city2, realDistance] = Calculation.closestCities(yearlyDistance);
   updateMap(city1, city2, yearlyDistance);
   console.log(city1, city2, realDistance);

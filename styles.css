@@ -203,6 +203,6 @@ h1 {
 #map {
   height: 400px;
   /* This sets the height of the map */
-  width: 80%;
+  width: 100%;
   /* This sets the width of the map */
 }
