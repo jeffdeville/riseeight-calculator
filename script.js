@@ -229,7 +229,7 @@ function updateGauge(gaugeId, value) {
 }
 
 function updateMap(city1, city2, distance) {
-  document.getElementById("distance-walked").innerText = `Like walking from ${city1} to ${city2} (${distance} miles) every year!`;
+  document.getElementById("distance-walked").innerText = `walk from ${city1} to ${city2} (${distance} miles)!`;
   showWalkingDirections(city1, city2);
 }
 
