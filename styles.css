@@ -4,6 +4,8 @@ body {
   padding: 0;
   box-sizing: border-box;
   height: 100%;
+  background-color: #181a1b;
+  color: #c8c3bc;
 }
 
 #app {
@@ -17,6 +19,7 @@ h1 {
   width: 100%;
   text-align: center;
   margin: 10px;
+  color: #e8e6e3;
 }
 #effort h1 {
   margin-top: 0px;
@@ -40,7 +43,7 @@ section {
   align-items: center;
   justify-content: space-around;
   padding-bottom: 20px;
-  border-bottom: #e4e4e4;
+  border-bottom: #383c3f;
   border-bottom-width: 1px;
   border-bottom-style: solid;
 }
@@ -78,7 +81,7 @@ section {
   /* Specified to be the full width of the flex-item */
   height: 15px;
   border-radius: 5px;
-  background: #d3d3d3;
+  background: #292d2e;
   outline: none;
   opacity: 0.7;
   -webkit-transition: .2s;
@@ -136,16 +139,17 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: #c8c3bc;
 }
 
 .value {
   font-size: 2.5em;
-  color: #333;
+  color: #c8c3bc;
 }
 
 .unit {
   font-size: 0.85em;
-  color: #666;
+  color: #c8c3bc;
 }
 
 #distance-walked {

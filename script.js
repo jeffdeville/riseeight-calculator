@@ -220,6 +220,7 @@ function updateGauges() {
   // Calculate yearly distance
   const yearlyDistance = Calculation.yearlyDistance(hours, speed);
   const [city1, city2, realDistance] = Calculation.closestCities(yearlyDistance);
+  updateGauge("yearly-miles", yearlyDistance);
   updateMap(city1, city2, yearlyDistance);
   console.log(city1, city2, realDistance);
 }
@@ -229,7 +230,7 @@ function updateGauge(gaugeId, value) {
 }
 
 function updateMap(city1, city2, distance) {
-  document.getElementById("distance-walked").innerText = `walk from ${city1} to ${city2} (${distance} miles)!`;
+  document.getElementById("distance-walked").innerText = `That's from ${city1} to ${city2}!`;
   showWalkingDirections(city1, city2);
 }
 
