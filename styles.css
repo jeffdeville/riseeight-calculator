@@ -31,18 +31,6 @@ section {
   /* This centers all child items horizontally */
 }
 
-.slider-container {
-  display: flex;
-  margin-bottom: 20px;
-}
-
-.slider-label {
-  flex: 1;
-  text-align: left;
-  margin-bottom: 5px;
-  margin-left: 20px;
-}
-
 #sliders {
   display: flex;
   flex-direction: column;
@@ -52,12 +40,27 @@ section {
   width: 100%;
 }
 
-.slider {
+.slider-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+.slider-label {
   flex: 1;
+  text-align: left;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  width: 30%;
+}
+
+.slider {
+  /* flex: 1; */
   -webkit-appearance: none;
   /* Override default CSS styles */
   appearance: none;
-  width: 100%;
+  width: 70%;
   /* Specified to be the full width of the flex-item */
   height: 15px;
   border-radius: 5px;
@@ -142,28 +145,6 @@ h1 {
   /* Centers the text of the h1 tag */
 }
 
-@media (max-width: 768px) {
-  .slider-container {
-    flex-direction: column;
-  }
-
-  .slider-label,
-  .slider-value {
-    flex: 0 0 auto;
-    width: 100%;
-    /* Full width on smaller screens */
-  }
-
-  .slider {
-    width: 80%;
-    /* Slider width is reduced to 80% on smaller screens */
-    margin: 0 auto;
-    /* Center slider */
-  }
-}
-
-/* ... other styles ... */
-
 #daily-output {
   display: flex;
   flex-direction: column;
@@ -199,3 +180,4 @@ h1 {
   width: 100%;
   /* This sets the width of the map */
 }
+
