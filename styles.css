@@ -24,11 +24,11 @@ body {
 }
 
 section {
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* This centers all child items horizontally */
+  justify-content: space-around;
 }
 
 #sliders {
@@ -109,6 +109,14 @@ section {
   font-weight: bold;
 }
 
+.metrics {
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  justify-content: center;
+  width: 100%;
+}
+
 .metric {
   display: flex;
   flex-direction: column;
@@ -119,13 +127,6 @@ section {
   border-radius: 50%;
   background-color: #f0f0f0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.metrics {
-  display: flex;
-  flex-direction: row;
-  column-gap: 20px;
-  justify-content: center;
-  width: 100%;
 }
 
 .value {
@@ -143,27 +144,6 @@ h1 {
   /* Makes the h1 full width of the flex-container */
   text-align: center;
   /* Centers the text of the h1 tag */
-}
-
-#daily-output {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 100%;
-}
-
-.gauge {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-
-.gauge-container {
-  margin: 10px;
-  width: 150px;
-  height: 150px;
-  position: relative;
 }
 
 #map-row {
