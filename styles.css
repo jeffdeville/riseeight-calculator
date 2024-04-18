@@ -148,6 +148,10 @@ section {
   color: #666;
 }
 
+#distance-walked {
+  padding-top: 15px;
+}
+
 /* Style the map container to have a specific size */
 #map {
   width: 100%;
